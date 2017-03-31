@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <!--
+     卸载 launchctl unload cn.zhong.task.plist
+     启动 launchctl load cn.zhong.task.plist
+    -->
+    <!-- 名称，要全局唯一 -->
+    <key>Label</key>
+    <string>com.wangshen.task</string>
+
+    <!-- 要运行的程序， 如果省略这个选项，会把ProgramArguments的第一个
+    元素作为要运行的程序 -->
+    <key>Program</key>
+    <string>/Users/wangshen/Documents/task/wstrend.sh</string>
+
+
+    <!-- 命令， 第一个为命令，其它为参数-->
+    <key>ProgramArguments</key>
+    <array>
+      <string>/Users/wangshen/Documents/task/wstrend.sh</string>
+    </array>
+
+    <!-- 运行时间-->
+    <key>StartCalendarInterval</key>
+    <dict>
+
+      <key>Minute</key>
+      <integer>30</integer>
+
+      <key>Hour</key>
+      <integer>11</integer>
+
+    </dict>
+
+    <!-- 运行间隔，与StartCalenderInterval使用其一，单位为秒
+    <key>StartInterval</key>
+    <integer>2</integer>-->
+
+    <key>StandardOutPath</key>
+    <string>/Users/wangshen/Documents/task/wstrend.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/wangshen/Documents/task/wstrend.err</string>
+
+  </dict>
+</plist>

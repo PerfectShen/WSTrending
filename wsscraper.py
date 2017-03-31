@@ -20,7 +20,7 @@ def git_add_commit_push(date, filename):
 
 def createMarkdown(date, filename):
     with open(filename, 'w') as f:
-        f.write("## " + date + "\n")
+        f.write("## " + date + "\n")s
 
 
 def scrape(language, filename):
@@ -66,10 +66,11 @@ def job():
     createMarkdown(strdate, filename)
 
     # write markdown
-    scrape('python', filename)
+    scrape('objective-c', filename)
     scrape('swift', filename)
+    scrape('python', filename)
     scrape('javascript', filename)
-    scrape('go', filename)
+    
 
     # git add commit push
     git_add_commit_push(strdate, filename)

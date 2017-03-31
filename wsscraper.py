@@ -20,7 +20,7 @@ def git_add_commit_push(date, filename):
 
 def createMarkdown(date, filename):
     with open(filename, 'w') as f:
-        f.write("## " + date + "\n")s
+        f.write("## " + date + "\n")
 
 
 def scrape(language, filename):
